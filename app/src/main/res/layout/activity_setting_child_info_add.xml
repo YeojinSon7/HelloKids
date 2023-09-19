@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingChildInfoAddActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/top_image_layout">
+
+        <Button
+            android:id="@+id/btnBack26"
+            style="@style/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btnLogin"
+            style="@style/top_button1" />
+
+        <TextView
+            android:id="@+id/btnRegister"
+            style="@style/top_button2" />
+
+        <ImageButton
+            android:id="@+id/btnTranslate"
+            style="@style/top_button3" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/menus"
+        style="@style/bottom_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout style="@style/bottom_menu_layout">
+
+            <Button
+                android:id="@+id/btnBottomHome"
+                style="@style/btn_bottom_menu1"
+                app:iconPadding="0dp" />
+
+            <Button
+                android:id="@+id/btnBottomNotice"
+                style="@style/btn_bottom_menu2"
+                app:iconPadding="0dp" />
+
+            <Button
+                android:id="@+id/btnBottomDailynote"
+                style="@style/btn_bottom_menu3"
+                app:iconPadding="0dp" />
+
+            <Button
+                android:id="@+id/btnBottomSchoolbus"
+                style="@style/btn_bottom_menu4"
+                app:iconPadding="0dp" />
+
+            <Button
+                android:id="@+id/btnBottomSetting"
+                style="@style/btn_bottom_menu5"
+                app:iconPadding="0dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/menus"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:id="@+id/container_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPageTitle"
+                style="@style/text_title"
+                android:text="원아 추가" />
+
+            <TextView
+                android:id="@+id/textView38"
+                style="@style/text_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="6dp"
+                android:text="반 선택" />
+
+            <Spinner
+                android:id="@+id/classSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                style="@style/text_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="원아 이름" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/text_input_frame_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp">
+
+                <EditText
+                    android:id="@+id/childName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#F4F4F4"
+                    android:ems="10"
+                    android:hint="원아 이름을 입력하세요"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="#BBBBBB"
+                    android:textSize="16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView43"
+                style="@style/text_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="원아 생일" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/text_input_frame_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp">
+
+                <EditText
+                    android:id="@+id/childBirth"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#F4F4F4"
+                    android:ems="10"
+                    android:hint="ex) 2000-07-14"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="#BBBBBB"
+                    android:textSize="16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView42"
+                style="@style/text_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="원아 성별" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/text_input_frame_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="여아" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="남아" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#A9CB35"
+                android:text="추가하기" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
